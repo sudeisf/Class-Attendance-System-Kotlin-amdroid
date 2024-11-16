@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="X"
+        android:textSize="10sp"
+        android:textColor="@android:color/white"
+        android:background="@android:color/holo_red_dark"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/class_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Class Name"/>
+
+    <EditText
+        android:id="@+id/class_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Class Name" />
+
+    <TextView
+        android:id="@+id/class_code_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/black"
+        android:text="Class Code"/>
+
+    <EditText
+        android:id="@+id/class_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Class Code" />
+
+    <TextView
+        android:id="@+id/teacher_name_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/black"
+        android:text="Teacher Name"/>
+
+    <EditText
+        android:id="@+id/teacher_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="name" />
+
+    <TextView
+        android:id="@+id/StartDate_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="@color/black"
+        android:text="Start Date"/>
+
+    <Button
+        android:id="@+id/date"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="Choose " />
+
+
+    <Button
+        android:id="@+id/create_class_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Class" />
+
+
+</LinearLayout>

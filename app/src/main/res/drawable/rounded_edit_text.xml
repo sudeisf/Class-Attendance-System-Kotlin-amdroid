@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Default State -->
+    <item tools:ignore="StateListReachable">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Light Gray Background -->
+            <corners android:radius="10dp"/> <!-- Rounded Corners -->
+            <stroke android:color="#0B0B0B" android:width="1dp"/> <!-- Light Gray Border -->
+        </shape>
+    </item>
+
+    <!-- Pressed State -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Slightly Darker Gray Background -->
+            <corners android:radius="10dp"/> <!-- Rounded Corners -->
+            <stroke android:color="#FFFFFF" android:width="1dp"/> <!-- Darker Gray Border -->
+        </shape>
+    </item>
+
+    <!-- Focused State -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- White Background -->
+            <corners android:radius="10dp"/> <!-- Rounded Corners -->
+            <stroke android:color="#6200EE" android:width="1dp"/> <!-- Primary Color Border -->
+        </shape>
+    </item>
+
+    <!-- Disabled State -->
+    <item android:state_enabled="false">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFFFF"/> <!-- Very Light Gray Background -->
+            <corners android:radius="12dp"/> <!-- Rounded Corners -->
+            <stroke android:color="#FFFFFF" android:width="1dp"/> <!-- Disabled Border -->
+        </shape>
+    </item>
+
+</selector>

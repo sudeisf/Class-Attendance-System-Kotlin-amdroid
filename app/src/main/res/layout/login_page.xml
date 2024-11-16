@@ -17,22 +17,25 @@
         android:id="@+id/loginText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="127dp"
         android:fontFamily="sans-serif"
         android:text="Sign in"
+        android:textColor="#121111"
         android:textSize="50sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2" />
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="84dp"
         android:layout_marginEnd="32dp"
         android:autofillHints="sudeis@gmail.com"
         android:hint="Email"
@@ -41,7 +44,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginText" />
+        app:layout_constraintTop_toBottomOf="@+id/loginText"
+        tools:ignore="MissingConstraints" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -87,7 +91,7 @@
 
     <!-- Register TextView -->
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
