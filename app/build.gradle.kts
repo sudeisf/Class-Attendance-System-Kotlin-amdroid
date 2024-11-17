@@ -67,6 +67,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.appcompat)
     implementation(libs.com.google.android.material)
+    implementation(libs.androidx.compose.material)
 
 
     // Testing libraries

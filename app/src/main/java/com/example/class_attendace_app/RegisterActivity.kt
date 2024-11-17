@@ -52,6 +52,9 @@ class RegisterActivity: AppCompatActivity() {
             if (result != -1L) {
                 Log.d("RegisterActivity", "Teacher registered successfully!")
                 Toast.makeText(this, "Successfully registered", Toast.LENGTH_SHORT).show()
+                val intent = Intent(this,LoginActivity::class.java)
+                startActivity(intent)
+                finish()
             } else {
                 Log.e("RegisterActivity", "Error inserting user.")
                 Toast.makeText(this, "Failed to register", Toast.LENGTH_SHORT).show()

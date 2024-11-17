@@ -1,16 +1,16 @@
-import android.annotation.SuppressLint
+package com.example.class_attendace_app
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.class_attendace_app.ClassModel
-import com.example.class_attendace_app.R
 
 class ClassAdapter(
     private var classList: List<ClassModel>, // List of class models
-    private val onClick: (ClassModel) -> Unit // Click handler
+    private val onClick: (ClassModel) -> Unit // Lambda to handle clicks
 ) : RecyclerView.Adapter<ClassAdapter.ClassViewHolder>() {
 
     // Update the class list with new data
@@ -33,9 +33,19 @@ class ClassAdapter(
         holder.className.text = currentClass.name
         holder.classDescription.text = currentClass.description
         holder.courseCode.text = currentClass.courseCode
+        holder.time.text = currentClass.startDate
 
-        // Set onClick listener for the item view
-        holder.itemView.setOnClickListener { onClick(currentClass) }
+        // Handle item click and invoke the lambda
+        holder.itemView.setOnClickListener {
+            onClick(currentClass)
+        }
+
+        holder.itemView.setOnClickListener {
+            val context = holder.itemView.context
+            val intent = Intent(context, ClassDetailActivity::class.java)
+            intent.putExtra("CLASS_ID", currentClass.id)
+            context.startActivity(intent)
+        }
     }
 
     // Get the item count (size of the class list)
@@ -46,5 +56,6 @@ class ClassAdapter(
         val className: TextView = itemView.findViewById(R.id.class_name)
         val classDescription: TextView = itemView.findViewById(R.id.class_description)
         val courseCode: TextView = itemView.findViewById(R.id.class_code)
+        val time: TextView = itemView.findViewById(R.id.timestamp_one)
     }
 }

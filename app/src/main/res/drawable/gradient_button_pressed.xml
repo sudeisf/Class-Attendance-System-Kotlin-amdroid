@@ -1,0 +1,19 @@
+<shape xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
+    <!-- Background gradient when pressed -->
+    <gradient
+        android:startColor="#626362"
+    android:endColor="#4CAF50"
+    android:angle="45" />
+
+
+    <corners android:radius="25dp" />
+
+
+    <padding
+        android:left="12dp"
+        android:top="12dp"
+        android:right="12dp"
+        android:bottom="12dp"/>
+</shape>

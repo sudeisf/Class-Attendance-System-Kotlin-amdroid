@@ -1,7 +1,5 @@
 package com.example.class_attendace_app
 
-import ClassAdapter
-import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.app.DatePickerDialog
 import android.os.Bundle
@@ -38,6 +36,8 @@ class MainActivity : ComponentActivity() {
 
         recyclerView = findViewById(R.id.recycler_view_classes)
         recyclerView.layoutManager = LinearLayoutManager(this)
+
+
 
         // Fetch data and set adapter
         val classList = databaseHelper.getAllClasses()

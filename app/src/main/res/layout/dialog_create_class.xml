@@ -82,7 +82,9 @@
         android:id="@+id/create_class_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Create Class" />
+        android:backgroundTint="#101010"
+        android:text="Create"
+        android:textColor="#FFFFFF" />
 
 
 </LinearLayout>
