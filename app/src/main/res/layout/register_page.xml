@@ -1,113 +1,121 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center">
+    tools:context=".RegisterActivity">
 
-    <!-- Title -->
+    <!-- Sign Up Title -->
     <TextView
-        android:id="@+id/register_title"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="24sp"
-        android:layout_marginBottom="24dp"
-        android:textColor="@android:color/black"
-        android:gravity="center"/>
+        android:layout_marginTop="100dp"
+        android:text="Sign Up"
+        android:textColor="#101010"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Full Name Field -->
+    <!-- Name Input -->
     <EditText
-        android:id="@+id/full_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Full Name"
-        android:inputType=""
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="12dp"
-        android:background="@drawable/rounded_edit_text"/>
+        android:id="@+id/teacher_full_name"
+        android:layout_width="241dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="109dp"
+        android:autofillHints=""
+        android:hint="full name"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.612"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-    <!-- Email Field -->
+    <!-- Email Input -->
     <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/email2"
+        android:layout_width="242dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="110dp"
+        android:autofillHints=""
+        android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="12dp"
-        android:background="@drawable/rounded_edit_text"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teacher_full_name" />
 
-    <!-- Password Field -->
+    <!-- Password Input -->
     <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/password2"
+        android:layout_width="242dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginEnd="110dp"
+        android:autofillHints=""
+        android:ems="10"
         android:hint="Password"
-        android:fontFamily="sans-serif"
         android:inputType="textPassword"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="12dp"
-        android:background="@drawable/rounded_edit_text"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email2"
+        android:layout_marginTop="16dp" />
 
-    <!-- Confirm Password Field -->
+    <!-- Phone Number Input -->
     <EditText
-        android:id="@+id/confirm_password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Confirm Password"
-        android:fontFamily="sans-serif"
-        android:inputType="textPassword"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"
-        android:padding="12dp"
-        android:background="@drawable/rounded_edit_text"/>
+        android:id="@+id/phoneNumber"
+        android:layout_width="244dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="112dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="Phone number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password2"
+        android:layout_marginTop="16dp" />
 
     <!-- Register Button -->
     <Button
         android:id="@+id/register_button"
-        android:layout_width="193dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@color/black"
-        android:padding="12dp"
+        android:layout_width="174dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@android:color/black"
         android:text="Register"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
 
-    <!-- Login Link (if you want to redirect to login page) -->
-
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:gravity="center"
-        android:minHeight="48dp"
-        android:text="Already have an account?"
-        android:textColor="@android:color/black"
-        android:textSize="20sp" />
-
+    <!-- Login Link -->
     <TextView
         android:id="@+id/login_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true"
         android:gravity="center"
-        android:text="Sign in"
-        android:textColor="@color/purple_500"
-        android:textColorHint="@color/teal_700"
-        android:textSize="20sp" />
+        android:text="Already have an account? Sign In"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_button"
+        android:layout_marginTop="16dp" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
