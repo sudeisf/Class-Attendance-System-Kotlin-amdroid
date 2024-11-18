@@ -15,7 +15,6 @@ class StudentAdapter(
     private val onClick: (StudentModel) -> Unit
 ) : RecyclerView.Adapter<StudentAdapter.StudentViewHolder>() {
 
-    // ViewHolder class to hold each student item
     class StudentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val studentName: TextView = itemView.findViewById(R.id.Student_name)
         val studentId: TextView = itemView.findViewById(R.id.student_id)
@@ -30,18 +29,14 @@ class StudentAdapter(
 
     override fun onBindViewHolder(holder: StudentViewHolder, position: Int) {
         val student = students[position]
-
         holder.studentName.text = student.name
         holder.studentId.text = student.rollNumber
         holder.attendanceToggle.isChecked = student.isPresent
 
-        // Handle toggle button click
         holder.attendanceToggle.setOnCheckedChangeListener { _, isChecked ->
             student.isPresent = isChecked
-            // Handle the attendance update logic here
         }
 
-        // Handle item click
         holder.itemView.setOnClickListener {
             onClick(student)
         }
@@ -55,7 +50,3 @@ class StudentAdapter(
         notifyDataSetChanged()
     }
 }
-
-
-
-

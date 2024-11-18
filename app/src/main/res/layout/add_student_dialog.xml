@@ -21,15 +21,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="Class Name"/>
+        android:text="Student Name"/>
 
     <EditText
-        android:id="@+id/class_name"
+        android:id="@+id/Student_name_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
-        android:hint="Class Name" />
+        android:hint="name of the student" />
 
     <TextView
         android:id="@+id/class_code_label"
@@ -38,44 +38,13 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
         android:textColor="@color/black"
-        android:text="Class Code"/>
+        android:text="ID Number"/>
 
     <EditText
-        android:id="@+id/class_code"
+        android:id="@+id/id_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Class Code" />
-
-    <TextView
-        android:id="@+id/teacher_name_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:text="Description"
-        android:textColor="@color/black" />
-
-    <EditText
-        android:id="@+id/desicription_input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="description " />
-
-    <TextView
-        android:id="@+id/StartDate_label"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
-        android:textColor="@color/black"
-        android:text="Start Date"/>
-
-    <Button
-        android:id="@+id/date"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:text="Choose" />
+        android:hint="Enter the id number" />
 
 
     <Button
@@ -83,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="#101010"
-        android:text="Create"
+        android:text="Add studnt"
         android:textColor="#FFFFFF" />
 
 
